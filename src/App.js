@@ -3,6 +3,7 @@ import './App.css';
 import { Auth } from './components/Auth';
 import Cookies from 'universal-cookie';
 import { useState, useRef } from 'react';
+import { Chat } from './components/Chat';
 const cookies = new Cookies();
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Auth setIsAuth={setIsAuth}/>
     </div>
   );}
-   return <div> {room? <div>chat</div> : 
+   return <div> {room? <div> <Chat room={room}/></div> : 
    <div className='room'>
     <label>enter room name:</label>
     <input ref={roomInputRef} />
