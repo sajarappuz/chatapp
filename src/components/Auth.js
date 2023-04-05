@@ -3,6 +3,7 @@ import { signInWithPopup } from "firebase/auth";
 //cookies
 
 import Cookies from "universal-cookie/cjs/Cookies";
+import "../styles/auth.css"
 const cookies = new Cookies();
 
 export const Auth = (props) =>{
